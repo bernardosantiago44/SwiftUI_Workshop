@@ -8,10 +8,21 @@
 import SwiftUI
 
 struct AppNavigation: View {
+    @State var authViewModel = AuthViewModel()
+    @State var projectsViewModel = ProjectsViewModel()
+    
     var body: some View {
-        NavigationStack {
-            AuthView()
-                .navigationTitle("Autenticación")
+        VStack {
+            if self.authViewModel.user == nil {
+                NavigationStack {
+                AuthView(authViewModel: self.authViewModel)
+                    .navigationTitle("Autenticación")
+                }
+            } else {
+                NavigationStack {
+                    ProjectsList(viewModel: self.projectsViewModel)
+                }
+            }
         }
     }
 }

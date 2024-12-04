@@ -14,6 +14,10 @@
 		9B63804A2CFE2F3500172362 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6380492CFE2F3500172362 /* AuthView.swift */; };
 		9B63804D2CFE394A00172362 /* RoundedTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B63804C2CFE394A00172362 /* RoundedTextFieldStyle.swift */; };
 		9B6380502CFE3D4000172362 /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B63804F2CFE3D4000172362 /* AppNavigation.swift */; };
+		9BCCB78D2D00CBCD005797B5 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCCB78C2D00CBCD005797B5 /* Project.swift */; };
+		9BCCB78F2D00CF5E005797B5 /* NewProjectForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCCB78E2D00CF5E005797B5 /* NewProjectForm.swift */; };
+		9BCCB7912D00D650005797B5 /* ProjectsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCCB7902D00D650005797B5 /* ProjectsList.swift */; };
+		9BCCB7932D00D9D5005797B5 /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCCB7922D00D9D5005797B5 /* ProjectsViewModel.swift */; };
 		9BE4F6D62CFF791E001501D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BE4F6D52CFF791E001501D0 /* GoogleService-Info.plist */; };
 		9BE4F6D92CFF7B56001501D0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9BE4F6D82CFF7B56001501D0 /* FirebaseAuth */; };
 		9BE4F6DB2CFF7B56001501D0 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9BE4F6DA2CFF7B56001501D0 /* FirebaseDatabase */; };
@@ -30,6 +34,10 @@
 		9B6380492CFE2F3500172362 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		9B63804C2CFE394A00172362 /* RoundedTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextFieldStyle.swift; sourceTree = "<group>"; };
 		9B63804F2CFE3D4000172362 /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
+		9BCCB78C2D00CBCD005797B5 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		9BCCB78E2D00CF5E005797B5 /* NewProjectForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProjectForm.swift; sourceTree = "<group>"; };
+		9BCCB7902D00D650005797B5 /* ProjectsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsList.swift; sourceTree = "<group>"; };
+		9BCCB7922D00D9D5005797B5 /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 		9BE4F6D52CFF791E001501D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9BE4F6DF2CFF7F20001501D0 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				9B63803A2CFE2D4E00172362 /* SwiftWorkshopApp.swift */,
+				9BCCB78B2D00CBBA005797B5 /* Model */,
 				9BE4F6DE2CFF7EE5001501D0 /* ViewModel */,
 				9BE4F6D52CFF791E001501D0 /* GoogleService-Info.plist */,
 				9B63803C2CFE2D4E00172362 /* ContentView.swift */,
@@ -92,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				9B6380492CFE2F3500172362 /* AuthView.swift */,
+				9BCCB78E2D00CF5E005797B5 /* NewProjectForm.swift */,
+				9BCCB7902D00D650005797B5 /* ProjectsList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,10 +123,19 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		9BCCB78B2D00CBBA005797B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9BCCB78C2D00CBCD005797B5 /* Project.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9BE4F6DE2CFF7EE5001501D0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				9BE4F6DF2CFF7F20001501D0 /* AuthViewModel.swift */,
+				9BCCB7922D00D9D5005797B5 /* ProjectsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -199,12 +219,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BCCB7932D00D9D5005797B5 /* ProjectsViewModel.swift in Sources */,
 				9B63803D2CFE2D4E00172362 /* ContentView.swift in Sources */,
 				9B63804D2CFE394A00172362 /* RoundedTextFieldStyle.swift in Sources */,
 				9BE4F6E02CFF7F20001501D0 /* AuthViewModel.swift in Sources */,
 				9B6380502CFE3D4000172362 /* AppNavigation.swift in Sources */,
+				9BCCB78F2D00CF5E005797B5 /* NewProjectForm.swift in Sources */,
 				9B63803B2CFE2D4E00172362 /* SwiftWorkshopApp.swift in Sources */,
+				9BCCB78D2D00CBCD005797B5 /* Project.swift in Sources */,
 				9B63804A2CFE2F3500172362 /* AuthView.swift in Sources */,
+				9BCCB7912D00D650005797B5 /* ProjectsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

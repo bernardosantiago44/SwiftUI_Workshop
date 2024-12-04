@@ -22,7 +22,7 @@ struct SwiftWorkshopApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AuthView()
+            AppNavigation()
         }
     }
 }
