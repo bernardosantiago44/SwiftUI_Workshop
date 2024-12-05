@@ -23,6 +23,7 @@
 		9BE4F6DB2CFF7B56001501D0 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9BE4F6DA2CFF7B56001501D0 /* FirebaseDatabase */; };
 		9BE4F6DD2CFF7B56001501D0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9BE4F6DC2CFF7B56001501D0 /* FirebaseFirestore */; };
 		9BE4F6E02CFF7F20001501D0 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4F6DF2CFF7F20001501D0 /* AuthViewModel.swift */; };
+		9BE6CAE62D021E2B00C0A089 /* ProjectPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6CAE52D021E2B00C0A089 /* ProjectPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		9BCCB7922D00D9D5005797B5 /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 		9BE4F6D52CFF791E001501D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9BE4F6DF2CFF7F20001501D0 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		9BE6CAE52D021E2B00C0A089 /* ProjectPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				9B6380492CFE2F3500172362 /* AuthView.swift */,
+				9BE6CAE52D021E2B00C0A089 /* ProjectPreview.swift */,
 				9BCCB78E2D00CF5E005797B5 /* NewProjectForm.swift */,
 				9BCCB7902D00D650005797B5 /* ProjectsList.swift */,
 			);
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BCCB7932D00D9D5005797B5 /* ProjectsViewModel.swift in Sources */,
+				9BE6CAE62D021E2B00C0A089 /* ProjectPreview.swift in Sources */,
 				9B63803D2CFE2D4E00172362 /* ContentView.swift in Sources */,
 				9B63804D2CFE394A00172362 /* RoundedTextFieldStyle.swift in Sources */,
 				9BE4F6E02CFF7F20001501D0 /* AuthViewModel.swift in Sources */,

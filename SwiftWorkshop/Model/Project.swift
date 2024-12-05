@@ -25,6 +25,27 @@ struct Project: Identifiable, Codable {
         
         self.id = UUID().uuidString
     }
+    
+    // For preview purposes only
+    init(title: String, description: String, inProgress: Bool) {
+        self.title = title
+        self.description = description
+        self.inProgress = inProgress
+        
+        self.author = Author()
+        self.id = UUID().uuidString
+        self.startDate = .now
+    }
+    
+    init(project: Project) {
+        self.title = project.title
+        self.description = project.description
+        self.startDate = project.startDate
+        self.inProgress = !project.inProgress
+        self.author = project.author
+        
+        self.id = project.id
+    }
 }
 
 struct Author: Codable {

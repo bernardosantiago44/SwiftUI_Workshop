@@ -13,6 +13,34 @@ struct ProjectsList: View {
     var body: some View {
         List {
             // Projects go here
+            ForEach(viewModel.filteredProjects) { project in
+                ProjectPreview(project: project)
+                    .swipeActions {
+                        Button(role: .destructive) {
+                            viewModel.removeProject(project)
+                        } label: {
+                            Text("Eliminar")
+                        }
+                        
+                        Button {
+                            viewModel.newProject = Project(project: project)
+                            viewModel.uploadProject(updateList: false)
+                            
+                            if let index = self.viewModel.projects.firstIndex(where: { $0.id == project.id }) {
+                                self.viewModel.projects[index].inProgress.toggle()
+                            }
+                        } label: {
+                            Text(project.inProgress ? "Completo" : "En progreso")
+                        }
+                    }
+            }
+        }
+        .searchable(text: $viewModel.searching)
+        .task {
+            await viewModel.downloadProjects()
+        }
+        .refreshable {
+            await viewModel.downloadProjects()
         }
         .navigationTitle("Proyectos")
         .toolbar {
